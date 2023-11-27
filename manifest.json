@@ -1,0 +1,28 @@
+
+
+{
+    "manifest_version": 2,
+    "name": "Google Drive Trash Cleaner",
+    "description": "Deletes trash files inside the trash can on google drive.",
+    "icons": {
+      "16": "icon.png",   
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "version": "1.0",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "tabs"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://one.google.com/storage/*"],
+        "js": ["autocleaner.js"]
+      }
+    ],
+    "browser_action": {
+      "default_popup": "popup.html"
+
+    }
+  }
